@@ -6,7 +6,6 @@ export interface QuickActionCard {
   points: string[];
   button: string;
   icon: React.ReactNode;
-  highlight: boolean;
 }
 
 const cards: QuickActionCard[] = [
@@ -29,7 +28,6 @@ const cards: QuickActionCard[] = [
         />
       </svg>
     ),
-    highlight: false,
   },
   {
     title: "Schedule Your Visit",
@@ -50,7 +48,6 @@ const cards: QuickActionCard[] = [
         />
       </svg>
     ),
-    highlight: false,
   },
   {
     title: "Emergency Services",
@@ -71,7 +68,6 @@ const cards: QuickActionCard[] = [
         />
       </svg>
     ),
-    highlight: true,
   },
 ];
 

@@ -42,6 +42,8 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  --color-light-teal: var(--light-teal);
+  --color-light-orange: var(--light-orange);
 }
 
 @layer utilities {
@@ -76,10 +78,12 @@
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: #effbfc4c;
+  --light-teal: #299fb0;
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
+  --light-orange: #fdf0d7;
   --accent: #e56e1b;
   --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);

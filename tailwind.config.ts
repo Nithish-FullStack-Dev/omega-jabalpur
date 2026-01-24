@@ -5,15 +5,24 @@ module.exports = {
     // ... your other plugins
     require("tailwindcss-animate"),
   ],
-  extend: {
-    fontFamily: {
-      sans: ["var(--font-satoshi)", "system-ui", "sans-serif"],
-    },
-  },
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     screens: {
       xl: "1280px",
       xs: "402px",
+    },
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-satoshi)", "system-ui", "sans-serif"],
+      },
+      colors: {
+        "light-teal": "var(--light-teal)",
+        "light-orange": "var(--light-orange)",
+      },
     },
   },
 };

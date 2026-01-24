@@ -4,16 +4,16 @@ import { stats } from "../constants/WelcomeOmegaHospitals";
 
 const WelcomeOmegaHospitals = () => {
   return (
-    <section className="bg-[#f9fdfd] py-20">
+    <section className="bg-secondary py-20">
       <div className="mx-auto max-w-7xl px-4">
         {/* Heading */}
-        <h2 className="text-center text-2xl md:text-3xl font-semibold text-teal-600 mb-14">
+        <h2 className="text-center text-2xl md:text-3xl font-semibold text-light-teal mb-14">
           Welcome To Omega Hospitals, Jabalpur
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* LEFT CONTENT */}
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-black text-[14px] leading-relaxed">
             <p>
               At Omega Hospitals Jabalpur, we bring world-class, multispecialty
               healthcare to the heart of Madhya Pradesh. As part of India's
@@ -57,39 +57,74 @@ const WelcomeOmegaHospitals = () => {
           </div>
 
           {/* RIGHT STATS */}
-          <div className="space-y-5">
-            {stats.map((item) => {
+          <div className="relative flex flex-col w-full  mx-auto p-4">
+            {stats.map((item, index) => {
               const Icon = item.icon;
+              const isRightAligned = index % 2 === 0;
+
               return (
                 <div
                   key={item.id}
-                  className="relative flex items-center bg-white rounded-xl shadow-sm overflow-hidden"
+                  className={`relative flex w-full ${
+                    isRightAligned ? "justify-end" : "justify-start"
+                  }`}
                 >
-                  {/* Left Teal Tab */}
-                  <div className="absolute left-0 top-0 h-full w-14 bg-teal-500 rounded-r-xl" />
+                  {/* Card Container */}
+                  <div
+                    className={`relative w-full max-w-[850px] h-[120px] flex items-center overflow-hidden ${
+                      isRightAligned
+                        ? "border-t border-b border-r border-gray-200 rounded-tr-[30px] rounded-br-[30px]"
+                        : "border-t border-b border-l border-gray-200 rounded-tl-[30px] rounded-bl-[30px]"
+                    }
 
-                  {/* Content */}
-                  <div className="relative flex items-center gap-6 px-6 py-5 w-full">
-                    {/* Index */}
-                    <div className="text-xl font-semibold text-gray-900 min-w-[32px]">
-                      {item.id}
+`}
+                  >
+                    {/* Teal Cap Background (Decorative) */}
+                    <div
+                      className={`absolute top-0 h-full w-[100px] bg-[#2E9FB3] z-0
+              ${isRightAligned ? "right-0" : "left-0"}
+            `}
+                    >
+                      {/* Dot Pattern Overlay */}
+                      <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.2)_2px,transparent_2px)] bg-[length:20px_20px] opacity-60" />
                     </div>
 
-                    {/* Divider */}
-                    <div className="h-10 w-px bg-gray-300" />
+                    {/* Content Wrapper */}
+                    <div
+                      className={`relative z-10 flex items-center h-full w-full gap-8 px-10
+              ${isRightAligned ? "flex-row justify-end pr-[120px]" : "flex-row justify-start pl-30"}
+            `}
+                    >
+                      {/* Index Number */}
+                      <div className="text-[42px] font-normal text-black tracking-tight leading-none">
+                        {item.id}
+                      </div>
 
-                    {/* Icon */}
-                    <Icon className="h-6 w-6 text-gray-800" />
+                      {/* Vertical Divider */}
+                      <div className="h-[45px] w-[1px] bg-gray-300" />
 
-                    {/* Text */}
-                    <div>
-                      <p className="text-teal-600 font-semibold text-lg">
-                        {item.value}
-                      </p>
-                      <p className="text-sm font-medium text-gray-800">
-                        {item.title}
-                      </p>
-                      <p className="text-xs text-gray-500">{item.subtitle}</p>
+                      {/* Icon */}
+                      <div className="flex-shrink-0">
+                        <Icon
+                          className="w-8 h-8 text-black"
+                          strokeWidth={1.5}
+                        />
+                      </div>
+
+                      {/* Text Content */}
+                      <div
+                        className={`flex flex-col ${isRightAligned ? "items-end text-right" : "items-start text-left"}`}
+                      >
+                        <p className="text-[#2E9FB3] font-bold text-[22px] leading-tight">
+                          {item.value}
+                        </p>
+                        <p className="text-[17px] font-medium text-gray-900 leading-tight mt-1">
+                          {item.title}
+                        </p>
+                        <p className="text-[14px] text-gray-500 mt-1">
+                          {item.subtitle}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
