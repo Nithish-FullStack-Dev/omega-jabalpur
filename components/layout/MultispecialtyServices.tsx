@@ -52,15 +52,13 @@ const MultispecialtyServices = () => {
                 {service.description}
               </p>
 
-              <div className="mt-6">
-                <a
-                  href="#"
-                  className="group inline-flex items-center justify-around w-full gap-2 text-sm font-normal sm:bg-transparent bg-accent sm:text-black text-white px-4 py-2.5 rounded-md border border-accent transition"
-                >
-                  {service.linkText}
+              <div className="relative mt-6 w-full sm:w-auto overflow-hidden group">
+                <span className="absolute inset-0 bg-accent scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 rounded-md"></span>
+                <a className="relative z-10 inline-flex w-full items-center justify-between gap-2 px-4 py-2.5 text-sm font-normal border border-accent rounded-md sm:bg-transparent bg-accent sm:text-black text-white sm:group-hover:text-white transition-colors duration-300 group-hover:cursor-pointer">
+                  <span>{service.linkText}</span>
                   <ArrowRight
                     size={16}
-                    className="transition-transform duration-300 ease-out group-hover:translate-x-1.5 sm:text-accent text-white"
+                    className="transition-all duration-300 ease-out group-hover:translate-x-1.5 sm:text-accent sm:group-hover:text-white text-white"
                   />
                 </a>
               </div>
