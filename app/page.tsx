@@ -6,7 +6,6 @@ import QuickActions from "@/components/layout/QuickActions";
 import RequestCallbackSection from "@/components/layout/RequestCallbackSection";
 import WelcomeOmegaHospitals from "@/components/layout/WelcomeOmegaHospitals";
 import WhyOmega from "@/components/layout/WhyOmega";
-import { Home } from "lucide-react";
 
 export default function HomePage() {
   return (

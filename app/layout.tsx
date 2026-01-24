@@ -8,7 +8,6 @@ import AOSProvider from "@/components/providers/AOSProvider";
 import MobileBottomNav from "@/components/layout/MobileBottomNav";
 import BookAppointment from "@/components/layout/BookAppointment";
 import { Toaster } from "sonner";
-import { QueryClient } from "@tanstack/react-query";
 import ReactQueryProvider from "@/components/providers/ReactQueryProvider";
 
 const satoshi = localFont({
@@ -44,7 +43,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const queryClient = new QueryClient();
   return (
     <html lang="en">
       <body className={`${satoshi.variable} font-sans antialiased`}>

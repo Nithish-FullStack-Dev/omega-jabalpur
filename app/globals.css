@@ -147,3 +147,13 @@
     @apply bg-background text-foreground font-sans md:pb-0 pb-12;
   }
 }
+
+/* Custom AOS animation for doctor image reveal from bottom */
+[data-aos="clip-down"] {
+  clip-path: inset(100% 0 0 0);
+  transition-property: clip-path;
+}
+
+[data-aos="clip-down"].aos-animate {
+  clip-path: inset(0 0 0 0);
+}

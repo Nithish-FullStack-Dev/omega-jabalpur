@@ -7,23 +7,36 @@ const WelcomeOmegaHospitals = () => {
   return (
     <section className="bg-secondary py-12 lg:py-20">
       <div className="mx-auto max-w-7xl px-4">
-        <h2 className="text-center text-2xl md:text-3xl font-semibold text-light-teal mb-10 lg:mb-14">
+        <h2
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          className="text-center text-2xl md:text-3xl font-semibold text-light-teal mb-10 lg:mb-14"
+        >
           Welcome To Omega Hospitals, Jabalpur
         </h2>
 
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-12 items-center">
           <div className="space-y-6 text-black text-[14px] leading-relaxed">
-            <p>
+            <p data-aos="fade-right" data-aos-duration="1000">
               At Omega Hospitals Jabalpur, we bring world-class, multispecialty
               healthcare to the heart of Madhya Pradesh. As part of India's
               leading hospital network with 9 locations nationwide, we combine
               cutting-edge medical technology with compassionate, patient-first
               care.
             </p>
-            <h4 className="font-semibold text-teal-600">
+            <h4
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              className="font-semibold text-teal-600"
+            >
               Why families across Central India trust us:
             </h4>
-            <p>
+            <p
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
               Located conveniently in Jabalpur, we eliminate the need for
               patients to travel to distant metro cities for advanced treatment.
               Whether you need cancer care, cardiac surgery, neurology,
@@ -34,18 +47,31 @@ const WelcomeOmegaHospitals = () => {
               </span>{" "}
               right here at home.
             </p>
-            <p>
+            <p
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="600"
+            >
               Our 170+ experienced doctors trained at institutions like AIIMS,
               CMC Vellore, and Tata Memorial Hospital work collaboratively
               across 25+ specialties to provide integrated, coordinated care
               tailored to your unique health needs.
             </p>
-            <p>
+            <p
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="800"
+            >
               From preventive health checkups to complex surgeries and critical
               care, we're committed to delivering quality healthcare that's
               accessible, affordable, and always focused on you.
             </p>
-            <button className="group/btn inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-white font-medium hover:bg-accent/85 transition">
+            <button
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1000"
+              className="group/btn inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-white font-medium hover:bg-accent/85 transition"
+            >
               Learn More About Us{" "}
               <ArrowRight
                 size={18}
@@ -63,6 +89,9 @@ const WelcomeOmegaHospitals = () => {
                 <div
                   key={item.id}
                   className={`relative flex w-full ${isRightAligned ? "justify-end" : "justify-start"}`}
+                  data-aos={isRightAligned ? "fade-left" : "fade-right"}
+                  data-aos-duration="1000"
+                  data-aos-delay={index * 200}
                 >
                   <div
                     className={`relative w-full max-w-[850px] min-h-[100px] lg:h-[120px] flex items-center overflow-hidden transition-all duration-300 ${isRightAligned ? "rounded-tr-[30px] lg:rounded-tr-[50px] rounded-br-[30px] lg:rounded-br-[50px] border-t border-b border-r border-gray-100 shadow-[10px_5px_20px_-5px_rgba(0,0,0,0.08)] lg:shadow-[20px_10px_40px_-10px_rgba(0,0,0,0.08)]" : "rounded-tl-[30px] lg:rounded-tl-[50px] rounded-bl-[30px] lg:rounded-bl-[50px] border-t border-b border-l border-gray-100 shadow-[-10px_5px_20px_-5px_rgba(0,0,0,0.08)] lg:shadow-[-20px_10px_40px_-10px_rgba(0,0,0,0.08)]"}`}

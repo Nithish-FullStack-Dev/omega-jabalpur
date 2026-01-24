@@ -1,8 +1,33 @@
 "use client";
 
+import gsap from "gsap";
 import Image from "next/image";
+import { useLayoutEffect, useRef } from "react";
 
 export default function HomeHero() {
+  const doctorRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    if (!doctorRef.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        doctorRef.current,
+        {
+          clipPath: "inset(0 0 100% 0)",
+        },
+        {
+          clipPath: "inset(0 0 0% 0)",
+          duration: 1.2,
+          ease: "power3.out",
+          delay: 0.3,
+        },
+      );
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <section className="relative overflow-hidden ">
       {/* Background */}
@@ -35,19 +60,41 @@ export default function HomeHero() {
         <div className="hidden lg:grid lg:grid-cols-2 grid-cols-1">
           {/* LEFT CONTENT (padding stays here) */}
           <div className="py-20 lg:py-28">
-            <h1 className="w-full sm:text-[41px] text-sm font-black leading-tight text-gray-800">
-              WORLD CLASS MEDICAL CARE NOW IN{" "}
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="w-full sm:text-[41px] text-sm font-black leading-tight text-gray-800"
+            >
+              WORLD CLASS MEDICAL CARE
+            </h1>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+              className="w-full sm:text-[41px] text-sm font-black leading-tight text-gray-800"
+            >
+              NOW IN{" "}
               <span className="sm:text-[70px] text-[24px] text-[#E56E1B] sm:letter-spacing-[7px] sm:pl-20px font-black">
                 JABALPUR
               </span>
-            </h1>
+            </p>
 
-            <p className="mt-6 max-w-[75%] text-2xl font-bold text-black">
+            <p
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+              className="mt-6 max-w-[75%] text-2xl font-bold text-black"
+            >
               Expert Cancer Care, Cardiology, Neurology &amp; 25+ Specialties
             </p>
 
             {/* Trusted patients */}
-            <div className="mt-10 flex items-center gap-4">
+            <div
+              className="mt-10 flex items-center gap-4"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="600"
+            >
               <div className="flex -space-x-3">
                 {["profile1", "profile2", "profile3"].map((img) => (
                   <div
@@ -73,7 +120,11 @@ export default function HomeHero() {
 
           {/* RIGHT IMAGE (anchored to bottom) */}
           <div className="relative">
-            <div className="absolute bottom-0 right-0 w-full flex justify-end">
+            <div
+              ref={doctorRef}
+              style={{ clipPath: "inset(0 0 100% 0)" }}
+              className="absolute bottom-0 right-0 w-full flex justify-end"
+            >
               <Image
                 src="/images/home/doctor.png"
                 alt="Doctors"

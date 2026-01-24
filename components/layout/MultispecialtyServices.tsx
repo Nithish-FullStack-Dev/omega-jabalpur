@@ -10,10 +10,19 @@ const MultispecialtyServices = () => {
       <div className="mx-auto max-w-7xl px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-[32px] font-bold text-light-teal">
+          <h2
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="text-2xl md:text-[32px] font-bold text-light-teal"
+          >
             Multispecialty Care Services
           </h2>
-          <p className="mt-2 text-sm text-[#00000066] sm:w-[46%] w-full mx-auto">
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            className="mt-2 text-sm text-[#00000066] sm:w-[46%] w-full mx-auto"
+          >
             Comprehensive healthcare across 25+ specialties with expert doctors
             and advanced technology
           </p>
@@ -25,6 +34,9 @@ const MultispecialtyServices = () => {
             <div
               key={index}
               className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition hover:shadow-md"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay={index * 200}
             >
               <div className="flex items-center gap-3">
                 <span className="mt-1 flex h-7.5 w-7.5 items-center justify-center rounded-md bg-orange-100 text-orange-500 text-sm font-semibold">

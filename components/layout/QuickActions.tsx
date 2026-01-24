@@ -14,6 +14,9 @@ const QuickActions = () => {
                 key={index}
                 className={`group rounded-2xl border p-8 flex flex-col justify-between border-gray-100 hover:border-accent  hover:bg-[#E56E1B0D] transition duration-300
                 `}
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={index * 200}
               >
                 {/* Icon */}
                 <div className="mb-6">
