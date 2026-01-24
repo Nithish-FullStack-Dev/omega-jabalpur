@@ -19,7 +19,7 @@ const RequestCallbackSection = () => {
         {/* Right Form */}
         <div className="flex items-center justify-center px-6 py-14 lg:px-16">
           <div className="w-full max-w-lg">
-            <h2 className="text-2xl font-bold text-accent mb-2 text-center">
+            <h2 className="md:text-2xl text-xl font-bold text-accent mb-2 text-center">
               Request a Call Back Today
             </h2>
 

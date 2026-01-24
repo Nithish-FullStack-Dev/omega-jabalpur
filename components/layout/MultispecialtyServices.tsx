@@ -13,7 +13,7 @@ const MultispecialtyServices = () => {
           <h2 className="text-2xl md:text-[32px] font-bold text-light-teal">
             Multispecialty Care Services
           </h2>
-          <p className="mt-2 text-sm text-[#00000066] max-w-[46%] mx-auto">
+          <p className="mt-2 text-sm text-[#00000066] sm:w-[46%] w-full mx-auto">
             Comprehensive healthcare across 25+ specialties with expert doctors
             and advanced technology
           </p>
@@ -24,7 +24,7 @@ const MultispecialtyServices = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="service rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition hover:shadow-md"
+              className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition hover:shadow-md"
             >
               <div className="flex items-center gap-3">
                 <span className="mt-1 flex h-7.5 w-7.5 items-center justify-center rounded-md bg-orange-100 text-orange-500 text-sm font-semibold">
@@ -55,13 +55,12 @@ const MultispecialtyServices = () => {
               <div className="mt-6">
                 <a
                   href="#"
-                  className="inline-flex items-center justify-around w-full gap-2 text-sm font-normal"
+                  className="group inline-flex items-center justify-around w-full gap-2 text-sm font-normal sm:bg-transparent bg-accent sm:text-black text-white px-4 py-2.5 rounded-md border border-accent transition"
                 >
                   {service.linkText}
                   <ArrowRight
                     size={16}
-                    color="#E56E1B"
-                    className="transition-transform duration-300 ease-out service-hover:translate-x-1.5"
+                    className="transition-transform duration-300 ease-out group-hover:translate-x-1.5 sm:text-accent text-white"
                   />
                 </a>
               </div>

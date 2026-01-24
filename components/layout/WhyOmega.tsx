@@ -2,11 +2,11 @@ import { features } from "../constants/WhyOmega";
 
 const WhyOmega = () => {
   return (
-    <section className="bg-[#EFFBFC66] py-20">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#EFFBFC66] md:py-20 py-12">
+      <div className="max-w-7xl mx-auto px-9">
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-[32px] font-bold text-light-teal">
+          <h2 className="text-[24px] md:text-[32px] font-bold text-light-teal">
             Why Omega Jabalpur
           </h2>
           <p className="mt-3 text-[#00000066] text-sm ">
@@ -19,7 +19,7 @@ const WhyOmega = () => {
           {features.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl border border-gray-100 py-8 px-6 text-center hover:shadow-md transition"
+              className="bg-white rounded-xl border border-gray-100 py-8 md:px-6 px-2 text-center hover:shadow-md transition"
             >
               {/* Icon */}
               <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-teal-50 flex items-center justify-center">

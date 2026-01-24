@@ -5,7 +5,7 @@ import { cards } from "../constants/QuickActions";
 
 const QuickActions = () => {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white md:py-20 py-10">
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {cards.map((card, index) => {
