@@ -11,6 +11,7 @@ import {
 } from "@/schemas/appointment.schema";
 import { createAppointment } from "@/lib/api/appointment";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { services } from "../constants/MultispecialtyServices";
 
 export default function RequestForm() {
   const {
@@ -74,10 +75,18 @@ export default function RequestForm() {
             {...register("department")}
             className="w-full border rounded-md px-4 py-3 text-sm text-gray-500 "
           >
-            <option value="">Select Departments</option>
-            <option value="Oncology">Oncology</option>
-            <option value="Cardiology">Cardiology</option>
-            <option value="Neurology">Neurology</option>
+            <option value="" disabled>
+              Select Department
+            </option>
+
+            {services.map((service) => (
+              <option
+                key={service.title}
+                value={service.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
+              >
+                {service.title}
+              </option>
+            ))}
           </select>
         </div>
       </div>
