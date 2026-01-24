@@ -103,12 +103,7 @@ const NavBar = () => {
                 Request a Callback
               </a>
               <select className="border border-gray-300 rounded-md px-4 py-2 text-sm bg-white w-45 sm:w-55">
-                <option
-                  defaultValue=""
-                  disabled
-                  selected
-                  className="text-gray-500"
-                >
+                <option defaultValue="" disabled className="text-gray-500">
                   Please select a center
                 </option>
                 <option value="omega-hospitals-gachibowli">
@@ -164,12 +159,7 @@ const NavBar = () => {
             />
             <div className="flex-1 flex justify-center">
               <select className="border border-gray-300 p-2 rounded-sm text-sm">
-                <option
-                  defaultValue=""
-                  disabled
-                  selected
-                  className="text-gray-500"
-                >
+                <option defaultValue="" disabled className="text-gray-500">
                   Please select a center
                 </option>
                 <option value="omega-hospitals-gachibowli">
