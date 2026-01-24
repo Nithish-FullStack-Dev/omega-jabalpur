@@ -93,6 +93,7 @@ export default function RequestForm() {
         />
 
         <input
+          placeholder="Time"
           type="time"
           {...register("time")}
           className="w-full border rounded-md px-4 py-3 text-sm"
@@ -115,11 +116,13 @@ export default function RequestForm() {
     group
     w-full
     flex items-center justify-center gap-2
-    bg-[#E86C1F] text-white font-semibold
-    py-3 rounded-md
+    text-accent font-semibold
+    py-3 rounded-md border border-accent  
   "
       >
-        <span>{mutation.isPending ? "Submitting..." : "Make Appointment"}</span>
+        <span>
+          {mutation.isPending ? "Submitting..." : "Book an Appointment"}
+        </span>
 
         <ArrowUpRight
           size={20}

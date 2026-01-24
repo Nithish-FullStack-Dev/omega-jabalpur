@@ -12,7 +12,7 @@ const QuickActions = () => {
             return (
               <div
                 key={index}
-                className={`group rounded-2xl border p-8 flex flex-col justify-between border-gray-100 bg-light-orange hover:border-accent  hover:bg-[#E56E1B0D] transition duration-300
+                className={`group rounded-2xl border p-8 flex flex-col justify-between border-gray-100 hover:border-accent  hover:bg-[#E56E1B0D] transition duration-300
                 `}
               >
                 {/* Icon */}
@@ -41,12 +41,12 @@ const QuickActions = () => {
 
                 {/* Button */}
                 <button
-                  className={`mt-auto inline-flex items-center justify-center gap-2 rounded-md px-6 py-2.5 text-white font-medium transition bg-accent `}
+                  className={`group/btn mt-auto inline-flex items-center justify-center gap-2 rounded-md px-6 py-2.5 text-white font-medium transition bg-accent `}
                 >
                   {card.button}
                   <ArrowRight
                     size={18}
-                    className="group-hover:translate-x-1 transition duration-300"
+                    className="group-hover/btn:translate-x-1 transition duration-300"
                   />
                 </button>
               </div>

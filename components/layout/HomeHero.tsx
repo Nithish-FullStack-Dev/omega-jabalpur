@@ -32,12 +32,12 @@ export default function HomeHero() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4">
-        <div className="grid lg:grid-cols-2">
+        <div className="hidden lg:grid lg:grid-cols-2 grid-cols-1">
           {/* LEFT CONTENT (padding stays here) */}
           <div className="py-20 lg:py-28">
-            <h1 className="w-full text-[41px] font-black leading-tight text-gray-800">
+            <h1 className="w-full sm:text-[41px] text-sm font-black leading-tight text-gray-800">
               WORLD CLASS MEDICAL CARE NOW IN{" "}
-              <span className="text-[70px] text-[#E56E1B] letter-spacing-[7px] pl-20px font-black">
+              <span className="sm:text-[70px] text-[24px] text-[#E56E1B] sm:letter-spacing-[7px] sm:pl-20px font-black">
                 JABALPUR
               </span>
             </h1>
@@ -83,6 +83,59 @@ export default function HomeHero() {
                 priority
               />
             </div>
+          </div>
+        </div>
+
+        {/* Mobile */}
+        <div className="lg:hidden flex flex-col relative">
+          {/* LEFT CONTENT (padding stays here) */}
+          <div className="py-10 flex flex-col items-center text-center px-4">
+            <h1 className="w-[60%] sm:text-[16px] text-sm font-black leading-relaxed text-gray-800">
+              WORLD CLASS MEDICAL CARE NOW IN{" "}
+              <span className="text-[24px] text-[#E56E1B] font-black pl-[5px]">
+                JABALPUR
+              </span>
+            </h1>
+
+            <p className="mt-6 max-w-[75%] text-[16px] font-bold text-black">
+              Expert Cancer Care, Cardiology, Neurology &amp; 25+ Specialties
+            </p>
+
+            {/* Trusted patients */}
+            <div className="mt-10 flex items-center gap-4">
+              <div className="flex -space-x-3">
+                {["profile1", "profile2", "profile3"].map((img) => (
+                  <div
+                    key={img}
+                    className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-[#E56E1B]"
+                  >
+                    <Image
+                      src={`/images/home/${img}.jpg`}
+                      alt={img}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              <div>
+                <p className="text-xl font-semibold text-accent">52L +</p>
+                <p className="text-sm text-black">Trusted Patients</p>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT IMAGE (anchored to bottom) */}
+          <div className="relative">
+            <Image
+              src="/images/home/doctor.png"
+              alt="Doctors"
+              width={560}
+              height={760}
+              className="object-contain"
+              priority
+            />
           </div>
         </div>
       </div>
