@@ -31,7 +31,7 @@ const WhyOmega = () => {
               data-aos-duration="1000"
               data-aos-delay={index * 200}
               key={index}
-              className="group bg-white rounded-xl border border-gray-100 py-8 md:px-6 px-2 text-center hover:shadow-md hover:bg-light-teal/10 transition-all ease-in-out duration-300"
+              className="group bg-white rounded-xl border border-gray-100 py-8 md:px-6 px-2 text-center hover:shadow-md hover:bg-[#289eb0] transition  duration-300"
             >
               {/* Icon */}
               <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-teal-50 group-hover:bg-white flex items-center justify-center transition duration-300">
@@ -39,23 +39,27 @@ const WhyOmega = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-[16px] font-medium text-gray-900 mb-2">
+              <h3 className="text-[16px] font-medium group-hover:text-white text-gray-900 mb-2">
                 {item.title}
               </h3>
 
               {/* Highlight */}
               {item.highlight && (
                 <p className="text-sm">
-                  <span className="text-teal-600 font-semibold">
+                  <span className="text-teal-600 group-hover:text-accent font-semibold">
                     {item.highlight}
                   </span>{" "}
-                  <span className="text-[#00000066]">{item.description}</span>
+                  <span className="text-[#00000066] group-hover:text-white">
+                    {item.description}
+                  </span>
                 </p>
               )}
 
               {/* Normal description */}
               {!item.highlight && (
-                <p className="text-sm text-gray-400">{item.description}</p>
+                <p className="text-sm text-gray-400 group-hover:text-white">
+                  {item.description}
+                </p>
               )}
             </div>
           ))}

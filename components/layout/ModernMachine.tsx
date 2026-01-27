@@ -55,7 +55,7 @@ const ModernMachine = () => {
       gsap.fromTo(
         items,
         { autoAlpha: 0 },
-        { autoAlpha: 1, stagger: 0.08, duration: 0.6 }
+        { autoAlpha: 1, stagger: 0.08, duration: 0.6 },
       );
     }, containerRef);
 
@@ -82,11 +82,11 @@ const ModernMachine = () => {
     current === 0
       ? slides.length - 1
       : current === extendedSlides.length - 1
-      ? 0
-      : current - 1;
+        ? 0
+        : current - 1;
 
   return (
-    <section className="relative w-full">
+    <section className="relative w-full h-[150vh] flex items-center justify-center">
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center"
         style={{

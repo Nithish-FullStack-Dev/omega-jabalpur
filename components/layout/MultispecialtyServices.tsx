@@ -33,9 +33,9 @@ const MultispecialtyServices = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition hover:shadow-md"
+              className="rounded-xl border border-gray-100 bg-white p-10 shadow-sm transition hover:shadow-md"
               data-aos="zoom-in"
-              data-aos-duration="1000"
+              data-aos-duration="500"
               data-aos-delay={index * 200}
             >
               <div className="flex items-center gap-3">

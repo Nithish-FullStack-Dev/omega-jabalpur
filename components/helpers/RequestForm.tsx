@@ -45,21 +45,25 @@ export default function RequestForm() {
     <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
       {/* Row 1 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input
-          {...register("name")}
-          placeholder="Name"
-          className="w-full border rounded-md px-4 py-3 text-sm"
-        />
-        <input
-          {...register("contact")}
-          placeholder="Contact"
-          className="w-full border rounded-md px-4 py-3 text-sm"
-        />
-      </div>
+        <div className="flex flex-col">
+          <input
+            {...register("name")}
+            placeholder="Name"
+            className="w-full border rounded-md px-4 py-3 text-sm"
+          />
+          <p className="mt-1 text-xs text-red-500">{errors.name?.message}</p>
+        </div>
 
-      {/* Errors */}
-      <p className="text-xs text-red-500">{errors.name?.message}</p>
-      <p className="text-xs text-red-500">{errors.contact?.message}</p>
+        {/* Contact */}
+        <div className="flex flex-col">
+          <input
+            {...register("contact")}
+            placeholder="Contact"
+            className="w-full border rounded-md px-4 py-3 text-sm"
+          />
+          <p className="mt-1 text-xs text-red-500">{errors.contact?.message}</p>
+        </div>
+      </div>
 
       {/* Row 2 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -121,22 +125,21 @@ export default function RequestForm() {
       <button
         type="submit"
         disabled={mutation.isPending}
-        className="
-    group
-    w-full
-    flex items-center justify-center gap-2
-    text-accent font-semibold
-    py-3 rounded-md border border-accent  
-  "
+        className="group relative overflow-hidden w-full flex items-center justify-center gap-2
+  text-accent font-semibold py-3 rounded-md border border-accent"
       >
-        <span>
+        {/* Center Fill */}
+        <span className="absolute inset-0 bg-accent scale-0 group-hover:scale-100 transition-transform duration-300 ease-out origin-center" />
+
+        {/* Content */}
+        <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
           {mutation.isPending ? "Submitting..." : "Book an Appointment"}
         </span>
 
         <ArrowUpRight
           size={20}
-          className="transition-transform duration-300 ease-out
-               group-hover:translate-x-1 group-hover:-translate-y-1"
+          className="relative z-10 transition-all duration-300 ease-out
+    group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-white"
         />
       </button>
     </form>

@@ -16,7 +16,7 @@ const QuickActions = () => {
                 `}
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                data-aos-delay={index * 200}
+                data-aos-delay={index % 3 === 1 ? 0 : 300}
               >
                 {/* Icon */}
                 <div className="mb-6">

@@ -24,6 +24,12 @@ const features: Feature[] = [
           strokeLinecap="round"
           strokeLinejoin="round"
         />
+        <path
+          d="M6.5 12.5C9.81371 12.5 12.5 9.81371 12.5 6.5C12.5 3.18629 9.81371 0.5 6.5 0.5C3.18629 0.5 0.5 3.18629 0.5 6.5C0.5 9.81371 3.18629 12.5 6.5 12.5Z"
+          stroke="#299FB0"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     ),
   },
