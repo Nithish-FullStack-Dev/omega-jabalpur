@@ -95,7 +95,7 @@ const NavBar = () => {
                 </button>
               </div>
             </div>
-            <div className="flex xxs:flex-row flex-col items-center justify-between gap-3">
+            <div className="nav-res flex items-center justify-between gap-3">
               <a
                 href="#"
                 className="rounded-3xl border border-[#e56e1b] sm:px-5 px-3 py-1 sm:py-2 sm:text-sm text-[12px] text-[#e56e1b] font-medium whitespace-nowrap"
