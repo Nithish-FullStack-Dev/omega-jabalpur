@@ -52,7 +52,7 @@ export default function RootLayout({
           <NavBar />
           {children}
           <Footer />
-          <BookAppointment />
+          {/* <BookAppointment /> */}
           <MobileBottomNav />
         </ReactQueryProvider>
       </body>
