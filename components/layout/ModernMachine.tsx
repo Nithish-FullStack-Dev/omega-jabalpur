@@ -206,7 +206,7 @@ const ModernMachine = () => {
               <div
                 className="hidden lg:block absolute -left-[33%] top-1/2 -translate-y-1/2
       w-[1200px] h-[1200px]
-      rounded-full border-[28px] border-[#2AA0AE] -z-10"
+      rounded-full border-[15px] border-[#2AA0AE] -z-10"
               />
 
               {/* SLIDE CONTENT */}
